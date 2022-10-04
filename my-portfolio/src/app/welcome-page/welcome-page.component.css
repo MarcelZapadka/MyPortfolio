@@ -1,34 +1,20 @@
-.starter-screen {
-    background-color: #333;
+.image {
     width: 100%;
     height: 100%;
     position: absolute;
-    text-align: center;
+    background-image: url("https://images2.alphacoders.com/436/436857.jpg");
+    background-size: cover;
     font-family: Courgette;
     font-size: 40px;
     overflow: hidden;
 }
 
 .text {
-    color: white;
-    font-size: 40px;
-    margin-top: 30vh;
+    margin-left: 250px;
+    margin-top: 300px;
 }
 
-.main-page-button {
-    margin-top: 650px;
-    font-family: Poppins;
-    font-size: 30px;
-    border: 2px solid black;
-    border-radius: 20px;
-    width: 350px;
-    height: 100px;
-    background-color: black;
-    color: white;
+.second-text {
+    margin-top: 0px;
+    margin-left: 250px;
 }
-
-.main-page-button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-} 
