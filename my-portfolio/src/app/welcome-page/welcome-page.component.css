@@ -54,11 +54,13 @@
     position:relative;
     font-weight:bold;
     margin-left: 33vh;
-    margin-top: 80px;
+    margin-top: 1000px;
     width: 300px;
     font-size: 30px;
     background-color:transparent;
     border: none;
+    transition-duration: 0.5s;
+    opacity:0;
 }
 
 .go-to-main-button:hover {

@@ -1,0 +1,15 @@
+.one {
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+}
+
+.two {
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    margin-top: 800px;
+}
+

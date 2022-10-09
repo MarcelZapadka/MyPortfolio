@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap  } from 'gsap';
 import {TextPlugin} from 'gsap/TextPlugin';
+import {Router} from '@angular/router'
+
 gsap.registerPlugin(TextPlugin);
 
 @Component({
@@ -11,6 +13,10 @@ gsap.registerPlugin(TextPlugin);
 
 export class WelcomePageComponent implements OnInit {
   mainTimeLine = gsap.timeline();
+
+  constructor(
+    private router: Router,
+  ) {}
   
   starterAnimation() {
     this.mainTimeLine.to(".text", {text: "Hi! I'm Marcel!",  duration: 1, delay:1, repeatDelay: 0.3,})
@@ -23,27 +29,30 @@ export class WelcomePageComponent implements OnInit {
     .to(".second-text", { marginLeft: "50px", marginTop: "40px" , duration:0.1, marginRight:800, textAlign: "center", text:"", fontSize: "33px"})
     .to(".second-text", {opacity:1, duration:0.1})
     .to(".second-text", {text: "coding skills <br> coding journey <br> biography <br>my projects <br> and more...", duration:4})
-    .from(".go-to-main-button", {opacity:0, delay:1, duration:1})
-    .to(".info", {text: "* Press ENTER to skip this page ", duration: 1,})
+    .to(".go-to-main-button", {marginTop: "80px", duration: 0.1})
+    .to(".go-to-main-button", {opacity:1, delay:0.6, duration:1})
+    .to(".info", {text: "* Press ENTER to skip this page ", duration: 1, delay:0.2})
   }
 
   pressKeyToSkipAnimations(){
     window.addEventListener("keydown", (event) => {
       if(event.key === "Enter") {
-        this.goToMainPage()
+        this.goToDoorAnimation()
       }
     })
   }
- 
-  goToMainPage() {
+
+  goToDoorAnimation() {
     this.mainTimeLine.kill();
         gsap.to(".image", {scaleX:8, scaleY:8, duration:2, x: -1800})
-        gsap.to(".image", {y: -100000, delay:1.5})
+        gsap.to(".image", {y: -100000, delay:1.5, onComplete: () => {
+          this.router.navigateByUrl("main")
+        }})
   }      
 
   zlap() {
-    let okno = window.innerWidth
-    return console.log(okno)
+    let okno = window.innerWidth;
+    return console.log(okno);
   }
 
   ngOnInit(): void {

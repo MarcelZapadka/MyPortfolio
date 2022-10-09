@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { gsap } from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-main-page',
@@ -8,8 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
+  funkcja() {
+    gsap.to(".two" , {
+    scrollTrigger: {
+      trigger: ".two",
+      start: "top center",
+      markers: true,
+    },
+      x: 400,
+    })
+  }
   
   ngOnInit(): void {
+    this.funkcja()
   }
-
 }
