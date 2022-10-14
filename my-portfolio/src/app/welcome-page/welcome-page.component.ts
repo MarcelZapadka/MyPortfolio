@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { gsap  } from 'gsap';
 import {TextPlugin} from 'gsap/TextPlugin';
 import {Router} from '@angular/router'
+import { MainPageComponent } from '../main-page/main-page.component';
 
 gsap.registerPlugin(TextPlugin);
 
 @Component({
+  providers: [MainPageComponent],
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.css']
 })
 
-export class WelcomePageComponent implements OnInit {
+export class WelcomePageComponent implements OnInit, OnDestroy {
   mainTimeLine = gsap.timeline();
 
   constructor(
+    private mainPage: MainPageComponent,
     private router: Router,
   ) {}
   
@@ -59,5 +62,9 @@ export class WelcomePageComponent implements OnInit {
     this.starterAnimation()
     this.zlap()
     this.pressKeyToSkipAnimations()
+  }
+
+  ngOnDestroy(): void {
+    this.mainPage.reload()
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import {faAddressCard, faStar, faFlask, faPhone } from '@fortawesome/free-solid-svg-icons';
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
@@ -9,19 +10,31 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
+  starIcon = faStar;
+  aboutIcon = faAddressCard;
+  flaskIcon = faFlask;
+  phoneIcon = faPhone;
 
-  funkcja() {
-    gsap.to(".two" , {
-    scrollTrigger: {
-      trigger: ".two",
-      start: "top center",
-      markers: true,
-    },
-      x: 400,
-    })
+  scrollToAboutMe() {
+    document.getElementById("me")?.scrollIntoView({behavior:'smooth'})
+  }
+
+  scrollToSkills() {
+    document.getElementById("?")?.scrollIntoView({behavior:'smooth'})
+  }
+
+  scrollToProjects() {
+    document.getElementById("?")?.scrollIntoView({behavior:'smooth'})
+  }
+
+  scrollToContact() {
+    document.getElementById("?")?.scrollIntoView({behavior:'smooth'})
   }
   
+  reload() {
+    window.location.reload();
+  }
+
   ngOnInit(): void {
-    this.funkcja()
   }
 }

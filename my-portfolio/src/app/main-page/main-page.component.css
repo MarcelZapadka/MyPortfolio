@@ -1,15 +1,50 @@
-.one {
-    text-align: center;
-    width: 400px;
-    height: 400px;
-    background-color: red;
+.navbar {
+    position: sticky;
+    top: 0;
 }
 
-.two {
+.navbar ul {
+    padding-inline-start: 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    padding: 20px 15px;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    flex: 1 1 auto;
     text-align: center;
-    width: 400px;
-    height: 400px;
-    background-color: blue;
-    margin-top: 800px;
+    transition-duration: 0.3s;
+}
+
+.navbar li:hover {
+    cursor: pointer;
+    background-color: #3333;
+}
+
+h1 {
+    padding-left: 80px;
+    font-weight: 600;
+    font-size: 65px;
+    margin-top: 80px;
+    font-family: 'Dancing Script', cursive;
+    background-color: violet;
+}
+
+h2 {
+    padding-left: 80px;
+    font-weight: 600;
+    font-size: 45px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: brown;
+}
+
+.header {
+    display: flex;
 }
 
