@@ -15,6 +15,16 @@ export class MainPageComponent implements OnInit {
   flaskIcon = faFlask;
   phoneIcon = faPhone;
 
+  runAnimations() {
+     
+    gsap.to(".blob-one-text", { y: -10, duration: 3, ease: "none", yoyo:true, repeat: -1})
+    gsap.to(".blob-two-text", { x: 10, duration: 3, ease: "none", yoyo:true, repeat: -1})
+    gsap.to(".blob-three-text", { y: 10, x: -5, duration: 3, ease: "none", yoyo:true, repeat: -1})
+    gsap.to(".blob-four-text", { x: 10, y: -5, duration: 3, ease: "none", yoyo:true, repeat: -1})
+    gsap.to(".blob-five-text", { y: -10, x: 5, duration: 3, ease: "none", yoyo:true, repeat: -1})
+
+  }
+
   scrollToAboutMe() {
     document.getElementById("me")?.scrollIntoView({behavior:'smooth'})
   }
@@ -36,5 +46,6 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  this.runAnimations()
   }
 }
