@@ -10,23 +10,29 @@ gsap.registerPlugin(ScrollTrigger);
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
+  headerAnimationTimeLine = gsap.timeline();
   starIcon = faStar;
   aboutIcon = faAddressCard;
   flaskIcon = faFlask;
   phoneIcon = faPhone;
 
-  runAnimations() {
-     
+  
+
+  runNavbarAndImageAnimations() {
+    gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:0.5})
+    gsap.from(".image", {x:3000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
+  }
+
+  runBlobAnimations() {
     gsap.to(".blob-one-text", { y: -10, duration: 3, ease: "none", yoyo:true, repeat: -1})
     gsap.to(".blob-two-text", { x: 10, duration: 3, ease: "none", yoyo:true, repeat: -1})
     gsap.to(".blob-three-text", { y: 10, x: -5, duration: 3, ease: "none", yoyo:true, repeat: -1})
     gsap.to(".blob-four-text", { x: 10, y: -5, duration: 3, ease: "none", yoyo:true, repeat: -1})
     gsap.to(".blob-five-text", { y: -10, x: 5, duration: 3, ease: "none", yoyo:true, repeat: -1})
-
   }
 
   scrollToAboutMe() {
-    document.getElementById("me")?.scrollIntoView({behavior:'smooth'})
+    window.scrollTo(0, 0)
   }
 
   scrollToSkills() {
@@ -46,6 +52,6 @@ export class MainPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  this.runAnimations()
+  this.runBlobAnimations();
   }
 }
