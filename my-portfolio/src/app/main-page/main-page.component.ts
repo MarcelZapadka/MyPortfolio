@@ -16,11 +16,13 @@ export class MainPageComponent implements OnInit {
   flaskIcon = faFlask;
   phoneIcon = faPhone;
 
-  
+  runTextAnimations() {
+    
+  }
 
   runNavbarAndImageAnimations() {
     gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:0.5})
-    gsap.from(".image", {x:3000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
+    gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
   }
 
   runBlobAnimations() {
@@ -53,5 +55,5 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit(): void {
   this.runBlobAnimations();
-  }
+}
 }
