@@ -4,14 +4,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
-import { MainPageComponent } from './main-page/main-page.component';
+import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomePageComponent,
-    MainPageComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
