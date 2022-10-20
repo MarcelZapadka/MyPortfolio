@@ -3,7 +3,6 @@ import { gsap  } from 'gsap';
 import {TextPlugin} from 'gsap/TextPlugin';
 import {Router} from '@angular/router'
 import { HeaderComponent } from '../header/header.component';
-import { Head } from 'rxjs';
 
 gsap.registerPlugin(TextPlugin);
 
@@ -66,6 +65,5 @@ export class WelcomePageComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.mainPage.reload()
   }
 }

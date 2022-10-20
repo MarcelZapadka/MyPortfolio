@@ -17,19 +17,43 @@ export class HeaderComponent implements OnInit {
   aboutIcon = faAddressCard;
   flaskIcon = faFlask;
   phoneIcon = faPhone;
+  loading: number = 0
 
   runTextAnimations() {
-    let timeline = gsap.timeline();
-    timeline.to(".name", {text: "Marcel Zapadka",delay: 1, duration:2})
-    .from(".logo", {x:200, delay:5, duration:1})
-    .from(".name", {translateX: 350, duration: 1, fontSize: "7rem", onComplete: this.runNavbarAndImageAnimations})
-  }
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        phaseOne.progress(0.9,false)
+        phaseTwo.progress(0.9,false)
+        phaseThree.progress(0.9,false)
+        phaseFour.progress(0.9,false)
+        phaseFive.progress(0.9,false)
+      }
+    })
+    let phaseOne = gsap.to(".name", {y:50})
+    let phaseTwo = gsap.to(".logo", {y:50})
+    let phaseThree = gsap.to(".name", {text: "Marcel Zapadka",delay: 2, duration:2, onStart: this.scrollToAboutMe, id:"name"})
+    let phaseFour = gsap.from(".logo", {x:200, delay:9, duration:1.6})
+    let phaseFive = gsap.from(".name", {translateX: 350, duration: 1.6, fontSize: "7rem", delay:8.5,onComplete: this.runNavbarAndImageAnimations})
+  }  
 
   runNavbarAndImageAnimations() {
-    gsap.to(".navbar", {opacity:1, duration: 0.01, delay:0.5});
-    gsap.to(".image", {opacity: 1, duration: 0.01, delay:0.5});
-    gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:0.5})
-    gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        phaseOne.progress(0.9,false)
+        phaseTwo.progress(0.9,false)
+        phaseThree.progress(0.9,false)
+        phaseFour.progress(0.9,false)
+        gsap.from(".image", {x:2000, duration:0.2,})
+        gsap.from(".navbar", {x:3000, duration:0.2})
+      }
+    })
+
+
+
+   let phaseOne = gsap.to(".navbar", {opacity:1, duration: 0.01, delay:0.5});
+   let phaseTwo = gsap.to(".image", {opacity: 1, duration: 0.01, delay:0.5});
+   let phaseThree =  gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:0.5})
+   let phaseFour = gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
     }
   
    showBlobs() {
@@ -69,13 +93,9 @@ export class HeaderComponent implements OnInit {
     document.getElementById("?")?.scrollIntoView({behavior:'smooth'})
   }
   
-  reload() {
-    window.location.reload();
-  }
-
   ngOnInit(): void {
-  this.runBlobAnimations();
-  this.runTextAnimations();
-  this.showBlobs();
-}
+    this.runBlobAnimations();
+    this.runTextAnimations();  
+    this.showBlobs();
+  }
 }
