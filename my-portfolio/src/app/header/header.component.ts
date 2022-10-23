@@ -22,18 +22,16 @@ export class HeaderComponent implements OnInit {
   runTextAnimations() {
     window.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
-        phaseOne.progress(0.9,false)
-        phaseTwo.progress(0.9,false)
-        phaseThree.progress(0.9,false)
-        phaseFour.progress(0.9,false)
-        phaseFive.progress(0.9,false)
+        phaseOne.progress(0.9,false);
+        phaseTwo.progress(0.9,false);
+        phaseThree.progress(0.9,false);
+        phaseFour.progress(0.9, false);
       }
     })
-    let phaseOne = gsap.to(".name", {y:50})
-    let phaseTwo = gsap.to(".logo", {y:50})
-    let phaseThree = gsap.to(".name", {text: "Marcel Zapadka",delay: 2, duration:2, onStart: this.scrollToAboutMe, id:"name"})
-    let phaseFour = gsap.from(".logo", {x:200, delay:9, duration:1.6})
-    let phaseFive = gsap.from(".name", {translateX: 350, duration: 1.6, fontSize: "7rem", delay:8.5,onComplete: this.runNavbarAndImageAnimations})
+    const phaseOne = gsap.to(".name", {text: "Marcel Zapadka",delay: 2, duration:2, onStart: this.scrollToAboutMe, id:"name"})
+    const phaseTwo = gsap.from(".logo", {x:200, delay:9, duration:1.6})
+    const phaseThree = gsap.from(".name", {translateX: 350, duration: 1.6, fontSize: "7rem", delay:8.5,onComplete: this.runNavbarAndImageAnimations})
+    const phaseFour= gsap.to(".skip-animations-info", {opacity: 1, delay:12})
   }  
 
   runNavbarAndImageAnimations() {
@@ -48,28 +46,40 @@ export class HeaderComponent implements OnInit {
       }
     })
 
-
-
-   let phaseOne = gsap.to(".navbar", {opacity:1, duration: 0.01, delay:0.5});
-   let phaseTwo = gsap.to(".image", {opacity: 1, duration: 0.01, delay:0.5});
-   let phaseThree =  gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:0.5})
-   let phaseFour = gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
+   const phaseOne = gsap.to(".navbar", {opacity:1, duration: 0.01, delay:0.5});
+   const phaseTwo = gsap.to(".image", {opacity: 1, duration: 0.01, delay:0.5});
+   const phaseThree =  gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:0.5})
+   const phaseFour = gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:0.5})
     }
   
    showBlobs() {
-    gsap.to(".blob-one", {opacity:1, duration: 3.25, delay:14})
-    gsap.to(".blob-one-text", {opacity:1, duration: 3.25, delay:14})
-    gsap.to(".blob-two", {opacity:1, duration: 3.25, delay:14.3})
-    gsap.to(".blob-two-text", {opacity:1, duration: 3.25, delay:14.3})
-    gsap.to(".blob-three", {opacity:1, duration: 3.25, delay:14.6})
-    gsap.to(".blob-three-text", {opacity:1, duration: 3.25, delay:14.6})
-    gsap.to(".blob-four", {opacity:1, duration: 3.25, delay:14.9})
-    gsap.to(".blob-four-text", {opacity:1, duration: 3.25, delay:14.9})
-    gsap.to(".blob-five", {opacity:1, duration: 3.25, delay:15.2})
-    gsap.to(".blob-five-text", {opacity:1, duration: 3.25, delay:15.2})
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        phaseOne.progress(0.9,false);
+        phaseTwo.progress(0.9,false);
+        phaseThree.progress(0.9,false);
+        phaseFour.progress(0.9,false);
+        phaseFive.progress(0.9,false);
+        phaseSix.progress(0.9,false);
+        phaseSeven.progress(0.9,false);
+        phaseEight.progress(0.9,false);
+        phaseNine.progress(0.9,false);
+        phaseTen.progress(0.9,false);
+      }
+    })
+    const phaseOne = gsap.to(".blob-one", {opacity:1, duration: 3.25, delay:14})
+    const phaseTwo = gsap.to(".blob-one-text", {opacity:1, duration: 3.25, delay:14})
+    const phaseThree = gsap.to(".blob-two", {opacity:1, duration: 3.25, delay:14.3})
+    const phaseFour = gsap.to(".blob-two-text", {opacity:1, duration: 3.25, delay:14.3})
+    const phaseFive = gsap.to(".blob-three", {opacity:1, duration: 3.25, delay:14.6})
+    const phaseSix = gsap.to(".blob-three-text", {opacity:1, duration: 3.25, delay:14.6})
+    const phaseSeven = gsap.to(".blob-four", {opacity:1, duration: 3.25, delay:14.9})
+    const phaseEight = gsap.to(".blob-four-text", {opacity:1, duration: 3.25, delay:14.9})
+    const phaseNine = gsap.to(".blob-five", {opacity:1, duration: 3.25, delay:15.2})
+    const phaseTen = gsap.to(".blob-five-text", {opacity:1, duration: 3.25, delay:15.2})
   }  
 
-  runBlobAnimations() {
+  runBlobTextAnimations() {
     gsap.to(".blob-one-text", { y: -10, duration: 3, ease: "none", yoyo:true, repeat: -1});
     gsap.to(".blob-two-text", { x: 10, duration: 3, ease: "none", yoyo:true, repeat: -1});
     gsap.to(".blob-three-text", { y: 10, x: -5, duration: 3, ease: "none", yoyo:true, repeat: -1});
@@ -94,7 +104,7 @@ export class HeaderComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.runBlobAnimations();
+    this.runBlobTextAnimations();
     this.runTextAnimations();  
     this.showBlobs();
   }

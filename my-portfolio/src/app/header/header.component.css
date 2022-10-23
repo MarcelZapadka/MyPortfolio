@@ -290,9 +290,10 @@ h1 {
     animation: svg-animation 2s ease forwards 5.3s, fill 1.9s ease forwards 7.2s;
 }
 
-.info-about-skip {
+.skip-animations-info {
     transform: translate(40.8rem, 0.5rem);
     font-size: 10px;
+    opacity: 0;
 }
 
 @keyframes svg-animation {
