@@ -4,6 +4,7 @@
     background-color: white;
     opacity: 0;
     overflow: hidden;
+    z-index: 1;
 }
 
 .navbar ul {
@@ -38,7 +39,6 @@
     font-family: 'Montserrat', sans-serif;
     overflow: hidden;
 }
-
 
 .info {
     margin: 4rem 0rem 0rem 5rem;
@@ -311,3 +311,12 @@ h1 {
         fill: black;
     }
 }
+
+.timer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    padding: 15rem 1.5rem;
+}
+
