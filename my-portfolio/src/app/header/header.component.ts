@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import {faAddressCard, faStar, faFlask, faPhone } from '@fortawesome/free-solid-svg-icons';
+import {faAddressCard, faStar, faFlask, faPhone, faClock, faCircle } from '@fortawesome/free-solid-svg-icons';
 import {TextPlugin} from 'gsap/TextPlugin';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
   aboutIcon = faAddressCard;
   flaskIcon = faFlask;
   phoneIcon = faPhone;
+  clockIcon = faClock;
 
   runTextAnimations() {
     window.addEventListener("keydown", (event) => {

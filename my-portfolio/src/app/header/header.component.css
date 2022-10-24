@@ -313,18 +313,86 @@ h1 {
 }
 
 .timer {
-    background-image: linear-gradient(10deg,#000,#111, #444,#000, #333, #222,#000, #444, #111, #000 );
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
-    padding: 3.5rem 1.5rem;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    color: white;
+    padding: 2rem 1.5rem;
     background-size: 400%;
     animation: gradientAnimation 18s infinite alternate;
+    border-top: 1px solid black;
+    font-weight: 900;
 }
+
+.timer > h3 {
+    font-weight: 900;
+
+}
+
+.clock {
+    padding-bottom:1rem ;
+}
+
+.skills {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+
+.skills-icons {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0rem 3rem;
+}
+
+.html-icon,
+.css-icon,
+.js-icon,
+.ts-icon,
+.svg-icon,
+.angular-icon {
+    max-width: 100px;
+}
+
+.gsap-icon {
+    max-width:150px ;
+}
+
+.html-text {
+    transform: translateX(4px);
+}
+
+.css-text {
+    transform: translateX(22px);
+}
+
+.js-text {
+    transform: translateX(12px);
+}
+
+.ts-text {
+    transform: translateX(-37px);
+}
+
+.svg-text {
+    transform: translateX(-52px);
+}
+
+.angular-text {
+    transform: translateX(-47px);
+}
+
+.gsap-text {
+    transform: translateX(3px);
+}
+
+
 
 @keyframes gradientAnimation {
     0% {
