@@ -296,6 +296,135 @@ h1 {
     opacity: 0;
 }
 
+.timer {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid black;
+    font-weight: 900;
+}
+
+.timer > h3 {
+    font-weight: 900;
+}
+
+.clock {
+    padding-bottom:1rem ;
+}
+
+.skills {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
+
+.skills-icons {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0rem 3rem;
+    cursor: pointer;
+}
+
+.html-icon,
+.css-icon,
+.js-icon,
+.ts-icon,
+.svg-icon,
+.angular-icon {
+    width: 100px;
+    transition-duration: 0.8s;
+}
+
+.gsap-icon {
+    width:110px ;
+    transition-duration: 0.8s;
+}
+
+.html-text {
+    transform: translateX(7.5px);
+    transition-duration: 1.1s;
+}
+
+.css-text {
+    transform: translateX(30px);
+    transition-duration: 1.1s;
+}
+
+.js-text {
+    transform: translateX(24.5px);
+    transition-duration: 1.1s;
+}
+
+.ts-text {
+    transform: translateX(-20px);
+    transition-duration: 1.1s;
+}
+
+.svg-text {
+    transform: translateX(-44px);
+    transition-duration: 1.1s;
+}
+
+.angular-text {
+    transform: translateX(-52px);
+    transition-duration: 1.1s;
+}
+
+.gsap-text {
+    transform: translateX(3px);
+    transition-duration: 1.1s;
+}
+
+.arrow-wrapper {
+    margin-top: 2rem;
+    justify-content: center;
+    display: flex;
+    padding-left: 5rem;
+}
+.arrow {
+    color: red;
+} 
+
+.arrow-wrapper p {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 3rem;
+}
+
+.extra-abilities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 1.6rem;
+}
+
+.ability-image {
+    max-width: 37rem;
+    margin: 20px;
+}
+
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: right;
+    }
+
+    100% {
+        background-position: left;
+    }
+}
+
 @keyframes svg-animation {
     100% {
         stroke-dashoffset: 0;
@@ -309,97 +438,5 @@ h1 {
 
     100% {
         fill: black;
-    }
-}
-
-.timer {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem 1.5rem;
-    background-size: 400%;
-    animation: gradientAnimation 18s infinite alternate;
-    border-top: 1px solid black;
-    font-weight: 900;
-}
-
-.timer > h3 {
-    font-weight: 900;
-
-}
-
-.clock {
-    padding-bottom:1rem ;
-}
-
-.skills {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0rem 3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-}
-
-.skills-icons {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0rem 3rem;
-}
-
-.html-icon,
-.css-icon,
-.js-icon,
-.ts-icon,
-.svg-icon,
-.angular-icon {
-    max-width: 100px;
-}
-
-.gsap-icon {
-    max-width:150px ;
-}
-
-.html-text {
-    transform: translateX(4px);
-}
-
-.css-text {
-    transform: translateX(22px);
-}
-
-.js-text {
-    transform: translateX(12px);
-}
-
-.ts-text {
-    transform: translateX(-37px);
-}
-
-.svg-text {
-    transform: translateX(-52px);
-}
-
-.angular-text {
-    transform: translateX(-47px);
-}
-
-.gsap-text {
-    transform: translateX(3px);
-}
-
-
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: right;
-    }
-
-    100% {
-        background-position: left;
     }
 }
