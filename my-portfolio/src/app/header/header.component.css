@@ -318,10 +318,10 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2rem 3rem;
+    padding: 0rem 3rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
     cursor: pointer;
     border-bottom: 1px solid black;
 }
@@ -385,20 +385,21 @@ h1 {
     transition-duration: 1.1s;
 }
 
-.arrow-wrapper {
+.text-wrapper {
     margin-top: 2rem;
-    justify-content: center;
+    justify-content: space-around;
     display: flex;
-    padding-left: 5rem;
+    padding: 0rem 5rem;
 }
-.arrow {
-    color: red;
+.dumbell {
+    color: #38639e;
 } 
 
-.arrow-wrapper p {
+.text-wrapper p {
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
-    padding-top: 3rem;
+    font-family: 'Righteous', cursive;
+    font-size: 2.5rem;
+    padding-top: 2rem;
 }
 
 .extra-abilities {
@@ -411,6 +412,15 @@ h1 {
 .ability-image {
     max-width: 37rem;
     margin: 20px;
+}
+
+.arrow {
+    color: red;
+}
+
+.projects h4 {
+    font-size: 3rem;
+    font-family: 'Righteous', cursive;
 }
 
 

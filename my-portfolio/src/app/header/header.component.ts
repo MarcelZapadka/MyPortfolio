@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from 'gsap';
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import {faAddressCard, faStar, faFlask, faPhone, faClock, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import {faAddressCard, faStar, faFlask, faPhone, faClock, faArrowDown, faDumbbell } from '@fortawesome/free-solid-svg-icons';
 import {TextPlugin} from 'gsap/TextPlugin';
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(TextPlugin);
 //FALING BLOB EFFECT
-// 1. Ability to learn fast, comunative, love doing minimalistic, clear layouts, 
-
 @Component({
   selector: 'header-component',
   templateUrl: './header.component.html',
@@ -27,7 +25,8 @@ export class HeaderComponent implements OnInit {
   phoneIcon = faPhone;
   clockIcon = faClock;
   arrowDownIcon = faArrowDown;
-
+  dumbellIcon = faDumbbell;
+  
   runTextAnimations() {
     window.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
@@ -287,7 +286,7 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToSkills() {
-    document.getElementById("?")?.scrollIntoView({behavior:'smooth'});
+    document.getElementById("skills")?.scrollIntoView({behavior:'smooth'});
   }
 
   scrollToProjects() {

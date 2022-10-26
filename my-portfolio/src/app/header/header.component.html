@@ -126,7 +126,7 @@
 </header>
 
 <main>
-  <article class="timer">
+  <article class="timer" id="skills">
     <p class="clock"><fa-icon [icon]="clockIcon" class="fa-2x"></fa-icon></p>
     <h3> I started my journey with coding on June 16th 2022</h3>
     <p>Unill now, it's been <span style="color:red ;">{{ days }}</span> days <span style="color:red ;">{{ hours }}</span> hours <span style="color:red ;">{{minutes}}</span> minutes and <span style="color:red ;">{{seconds}}</span> seconds</p>
@@ -151,12 +151,10 @@
       <li class="svg-text" title="Scalable Vector Graphics">SVG</li>
       <li class="gsap-text" title="GreenSock library">GSAP</li>
     </ul>
-    <div class="arrow-wrapper">
-      <!-- <fa-icon class="fa-6x arrow" [icon]="arrowDownIcon"></fa-icon>
-      <p>EXTRA</p>
-      <p>SUPERPOWERS</p>
-      <fa-icon class="fa-6x arrow" [icon]="arrowDownIcon"></fa-icon> -->
-      <p>EXTRA SUPERPOWERS</p>
+    <div class="text-wrapper">
+      <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+      <p>ADDITIONAL SUPERPOWERS</p>
+      <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
     </div>
     <article class="extra-abilities">
       <div>
@@ -166,11 +164,20 @@
         <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198016110-898d5b03-41bb-436d-84f8-7169980316cf.png" alt="mytraits.png">
       </div>
       <div>
-        <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198014996-f34fe2b8-6e7c-4524-8bc4-24b6cfa2ca8b.png" alt="extrovertability.png">
+        <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198137478-545d3d45-f022-4166-a61d-6808a64ca33a.png" alt="extrovertability.png">
       </div>
       <div>
-        <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198029477-9f7a074a-9ee7-4bea-a684-b68a09d95c75.png" alt="simple.png">
+        <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198139245-9d2d551f-774b-47a5-bd7c-3a8009ecf22e.png" alt="simple.png">
       </div>
     </article>
   </section>
+  <div class="text-wrapper">
+    <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+    <p> <fa-icon class="arrow" [icon]="arrowDownIcon"></fa-icon> ALL THIS HELPED ME BUILD MY... <fa-icon class="arrow" [icon]="arrowDownIcon"></fa-icon></p>
+    <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+  </div>
+  <section class="projects">
+    <h4>...PROJECTS</h4>
+  </section>
+  
 </main>
