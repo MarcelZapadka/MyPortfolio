@@ -281,6 +281,22 @@ export class HeaderComponent implements OnInit {
     gsapText.addEventListener('mouseout', mouseoutFuntion);
   }
 
+  showCalcPhoto() {
+    gsap.to(".overlay", {opacity:1, duration: 0.1, pointerEvents: "all"});
+    gsap.to(".calculator-image", {scale: 1, duration: 0.1})
+  }
+
+  showBibleAppPhoto() {
+    gsap.to(".overlay", {opacity:1, duration: 0.1});
+    gsap.to(".calculator-image", {scale: 1, duration: 0.1})
+  }
+
+  hideProjectsPhotos() {
+    gsap.to(".overlay", {opacity:0, duration: 0.1, pointerEvents:"none", });
+    gsap.to(".calculator-image", {scale: 0, duration: 0.1})
+    gsap.to(".bibleapp-image", {scale: 0, duration: 0.1})
+  }
+
   scrollToAboutMe() {
     window.scrollTo(0, 0);
   }
@@ -311,12 +327,12 @@ export class HeaderComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.runBlobTextAnimations();
-    this.runTextAnimations();  
-    this.showBlobs();
-    this.displayTimeSinceIStartedToCode();
-    this.runNavbarAndImageAnimations();
-    this.hideOverflow();
-    this.hoverMySkills();
+    // this.runBlobTextAnimations();
+    // this.runTextAnimations();  
+    // this.showBlobs();
+    // this.displayTimeSinceIStartedToCode();
+    // this.runNavbarAndImageAnimations();
+    // this.hideOverflow();
+    // this.hoverMySkills();
   }
 }

@@ -173,11 +173,31 @@
   </section>
   <div class="text-wrapper">
     <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
-    <p> <fa-icon class="arrow" [icon]="arrowDownIcon"></fa-icon> ALL THIS HELPED ME BUILD MY... <fa-icon class="arrow" [icon]="arrowDownIcon"></fa-icon></p>
+    <p> ALL THIS HELPED ME BUILD...</p>
     <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
   </div>
   <section class="projects">
-    <h4>...PROJECTS</h4>
+    <h4> <fa-icon class="arrow" [icon]="arrowDownIcon"></fa-icon> MY PROJECTS <fa-icon class="arrow" [icon]="arrowDownIcon"></fa-icon> </h4>
+    <div class="project-wrapper">
+      <section class="project-overview-wrapper">
+        <div class="project-one">
+          <h5>Simple Calculator</h5>
+          <p>After two months of learning I've created fully functional calculator. It was very fun project. You can change it's color to green if u want (toogle effects). Open with Git or Site -></p>
+          <p class="navigation-to-project"><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
+          <button class="show-photo" (click)="showCalcPhoto()"> Show photo</button>
+        </div>
+        <div class="project-two">
+          <h5>Online Bible App</h5>
+          <p>Online Bible App translated by King James.The project seems simple only on the surface. For me, it was a real challenge thanks to which I learned how to use Angular.Open with Git or Site -></p>
+          <p class="navigation-to-project"><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
+          <button class="show-photo button"> Show photo</button>
+        </div>   
+        <p class="coming-soon" style="font-size: 3rem;">Coming soon..</p>
+        
+      </section>
+    </div>
   </section>
-  
 </main>
+<div class="overlay" (click)="hideProjectsPhotos()"></div>
+<img class="calculator-image" src="https://user-images.githubusercontent.com/110595617/198275378-ca3725e1-48db-4cab-bcdc-38e33bc4d2b4.png" alt="calculator">
+<img class="bibleapp-image" src="" alt="calculator">

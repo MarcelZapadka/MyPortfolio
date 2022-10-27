@@ -418,20 +418,153 @@ h1 {
     color: red;
 }
 
+.projects {
+    font-size: 5rem;
+    font-family: 'Teko', sans-serif;
+    text-align: left;
+    margin-top: 5rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    font-style: italic;
+}
+
 .projects h4 {
+    text-align: center;
+    transform: translate(-1rem,-5rem);
+}
+
+.projects ul {
+    list-style-type: none;
     font-size: 3rem;
-    font-family: 'Righteous', cursive;
+    padding-left: 0;
+    max-width: rem;
+}
+
+.git {
+    max-width: 3rem;
+    border: 8px solid black;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+    margin-right: 1.5rem;
+    background-color: white;
+}
+
+.git:hover {
+    background-color: beige;
+}
+
+.project-overview-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-one,
+.project-two,
+.project-three {
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-right: 3rem;
+    transform: translateY(-3rem);
+    border: 2px solid black;
+}
+
+.project-overview-wrapper h5{
+    font-size: 3.5rem;
+    border-bottom: 2px solid black;
+}
+
+.project-overview-wrapper p{
+    padding-top: 1rem;
+    font-size: 1.6rem;
+    max-width: 20rem;
+}
+
+.live {
+    max-width: 4rem;
+}
+
+.navigation-to-project {
+    text-align: left;
+}
+
+.show-photo {
+    font-size: 2rem;
+    font-family: 'Teko', sans-serif;
+    min-width: 20rem;
+    border-radius: 10px;
+    border: 2px solid beige;
+    margin-top: 15px;
+    padding-top: 7px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    background-color: #333;
+    color: white;
+}
+
+.button {
+    min-width: 22rem;
+}
+
+.coming-soon {
+    transform: translateY(130px);
+}
+
+.show-photo:hover {
+    background-color: #111;
+}
+
+.overlay {
+    min-width: 100%;
+    min-height: 100%;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.calculator-image {
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+    position: sticky;
+    bottom: 10px;
+    margin-left: 50%;
+    transform: translate(-50%) scale(0)
 }
 
 
 
-@keyframes gradientAnimation {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes background-animation {
     0% {
-        background-position: right;
+        background-position: left;
     }
 
     100% {
-        background-position: left;
+        background-position: right;
     }
 }
 
