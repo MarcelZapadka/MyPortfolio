@@ -536,6 +536,39 @@ h1 {
     transform: translate(-50%) scale(0)
 }
 
+.calculator-image.active {
+    transform: translate(-50%) scale(1);
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.bibleapp-image-one {
+    max-width: 80rem;
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+    position: sticky;
+    bottom: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, -12%) scale(0);
+}
+
+.bibleapp-image-one.active {
+    transform: translate(-50%, -12%) scale(1);
+}
+
+.bibleapp-image-two {
+    max-width: 80rem;
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+    position: sticky;
+    bottom: 10px;
+    margin-left: 50%;
+    transform: translate(-50%, -3%) scale(0);
+}
+
 
 
 

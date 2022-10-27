@@ -282,19 +282,29 @@ export class HeaderComponent implements OnInit {
   }
 
   showCalcPhoto() {
-    gsap.to(".overlay", {opacity:1, duration: 0.1, pointerEvents: "all"});
-    gsap.to(".calculator-image", {scale: 1, duration: 0.1})
+   const calcPhoto = document.querySelector(".calculator-image");
+   const overlay = document.querySelector(".overlay");
+   calcPhoto?.classList.add('active');
+   overlay?.classList.add('active');
+   document.body.style.overflowY = "hidden";
   }
 
   showBibleAppPhoto() {
-    gsap.to(".overlay", {opacity:1, duration: 0.1});
-    gsap.to(".calculator-image", {scale: 1, duration: 0.1})
+    const biblePhoto = document.querySelector(".bibleapp-image-one");
+    const overlay = document.querySelector(".overlay");
+    biblePhoto?.classList.add('active');
+    overlay?.classList.add('active');
+    document.body.style.overflowY = "hidden";
   }
 
   hideProjectsPhotos() {
-    gsap.to(".overlay", {opacity:0, duration: 0.1, pointerEvents:"none", });
-    gsap.to(".calculator-image", {scale: 0, duration: 0.1})
-    gsap.to(".bibleapp-image", {scale: 0, duration: 0.1})
+    const calcPhoto = document.querySelector(".calculator-image");
+    const overlay = document.querySelector(".overlay");
+    const biblePhoto = document.querySelector(".bibleapp-image-one");
+    calcPhoto?.classList.remove('active');
+    overlay?.classList.remove('active');
+    biblePhoto?.classList.remove('active');
+    document.body.style.overflowY = "visible";
   }
 
   scrollToAboutMe() {
@@ -327,12 +337,12 @@ export class HeaderComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    // this.runBlobTextAnimations();
-    // this.runTextAnimations();  
-    // this.showBlobs();
-    // this.displayTimeSinceIStartedToCode();
-    // this.runNavbarAndImageAnimations();
-    // this.hideOverflow();
-    // this.hoverMySkills();
+    this.runBlobTextAnimations();
+    this.runTextAnimations();  
+    this.showBlobs();
+    this.displayTimeSinceIStartedToCode();
+    this.runNavbarAndImageAnimations();
+    this.hideOverflow();
+    this.hoverMySkills();
   }
 }
