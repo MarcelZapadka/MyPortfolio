@@ -513,10 +513,24 @@ h1 {
     background-color: #111;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .overlay {
     min-width: 100%;
     min-height: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -524,16 +538,24 @@ h1 {
     background-color: rgba(0, 0, 0, 0.5);
     pointer-events: none;
     opacity: 0;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
 }
 
 .calculator-image {
-    z-index: 10;
+    /* z-index: 10;
     transition: 0.5s ease-in-out;
     position: sticky;
     bottom: 10px;
     margin-left: 50%;
-    transform: translate(-50%) scale(0)
+    transform: translate(-50%) scale(1);
+    display: none; */
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%) scale(0);
+    transition: 0.4s ease-in-out;
+    z-index: 2;
 }
 
 .calculator-image.active {
@@ -546,44 +568,25 @@ h1 {
 }
 
 .bibleapp-image-one {
-    max-width: 80rem;
+    /* max-width: 80rem;
     z-index: 10;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
     position: sticky;
     bottom: 10px;
     margin-left: 50%;
-    transform: translate(-50%, -12%) scale(0);
+    transform: translate(-50%, -12%) scale(1); */
+    max-width: 80rem;
+    position: fixed;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%) scale(0);
+    transition: 0.4s ease-in-out;
+    z-index: 2;
 }
 
 .bibleapp-image-one.active {
     transform: translate(-50%, -12%) scale(1);
 }
-
-.bibleapp-image-two {
-    max-width: 80rem;
-    z-index: 10;
-    transition: 0.5s ease-in-out;
-    position: sticky;
-    bottom: 10px;
-    margin-left: 50%;
-    transform: translate(-50%, -3%) scale(0);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

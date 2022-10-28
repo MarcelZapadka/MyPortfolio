@@ -282,11 +282,10 @@ export class HeaderComponent implements OnInit {
   }
 
   showCalcPhoto() {
-   const calcPhoto = document.querySelector(".calculator-image");
-   const overlay = document.querySelector(".overlay");
-   calcPhoto?.classList.add('active');
-   overlay?.classList.add('active');
-   document.body.style.overflowY = "hidden";
+      const calcPhoto = document.querySelector(".calculator-image");
+      const overlay = document.querySelector(".overlay");
+      calcPhoto?.classList.add('active');
+      overlay?.classList.add('active');
   }
 
   showBibleAppPhoto() {
@@ -294,17 +293,15 @@ export class HeaderComponent implements OnInit {
     const overlay = document.querySelector(".overlay");
     biblePhoto?.classList.add('active');
     overlay?.classList.add('active');
-    document.body.style.overflowY = "hidden";
   }
 
   hideProjectsPhotos() {
-    const calcPhoto = document.querySelector(".calculator-image");
-    const overlay = document.querySelector(".overlay");
-    const biblePhoto = document.querySelector(".bibleapp-image-one");
-    calcPhoto?.classList.remove('active');
-    overlay?.classList.remove('active');
-    biblePhoto?.classList.remove('active');
-    document.body.style.overflowY = "visible";
+      const calcPhoto = document.querySelector(".calculator-image");
+      const overlay = document.querySelector(".overlay");
+      const biblePhoto = document.querySelector(".bibleapp-image-one");
+      calcPhoto?.classList.remove('active');
+      overlay?.classList.remove('active');
+      biblePhoto?.classList.remove('active');
   }
 
   scrollToAboutMe() {
@@ -316,7 +313,7 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToProjects() {
-    document.getElementById("?")?.scrollIntoView({behavior:'smooth'});
+    document.getElementById("projects")?.scrollIntoView({behavior:'smooth'});
   }
 
   scrollToContact() {
