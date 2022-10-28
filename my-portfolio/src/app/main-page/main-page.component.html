@@ -1,0 +1,81 @@
+<main>
+    <article class="timer" id="skills">
+      <p class="clock"><fa-icon [icon]="clockIcon" class="fa-2x"></fa-icon></p>
+      <h3> I started my journey with coding on June 16th 2022</h3>
+      <p>Unill now, it's been <span style="color:red ;">{{ days }}</span> days <span style="color:red ;">{{ hours }}</span> hours <span style="color:red ;">{{minutes}}</span> minutes and <span style="color:red ;">{{seconds}}</span> seconds</p>
+      <p>During this time I have learned these:</p>
+    </article>
+    <section>
+      <ul class="skills-icons">
+        <li title="HyperText Markup Language"><img class="html-icon" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTMLlogo"></li>
+        <li title="Cascading Style Sheets"><img class="css-icon" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSSlogo"></li>
+        <li title="Just JavaScript"><img class="js-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JSlogo"></li>
+        <li title="Extention of JS"><img class="ts-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="TSlogo"></li>
+        <li title="TypeScript Framework"><img class="angular-icon" src="https://seeklogo.com/images/A/angular-logo-B76B1CDE98-seeklogo.com.png" alt="ANGULARlogo"></li>
+        <li title="Scalable Vector Graphics"><img class="svg-icon" src="https://cdn-icons-png.flaticon.com/512/1432/1432641.png" alt="SVGlogo"></li>
+        <li title="GreenSock library"><img class="gsap-icon" src="https://user-images.githubusercontent.com/110595617/197568647-711c69af-da81-4606-b074-abd56f9961e3.png" alt="GSAPogo"></li>
+      </ul>
+      <ul class="skills">
+        <li class="html-text" title="HyperText Markup Language">HTML</li>
+        <li class="css-text" title="Cascading Style Sheets">CSS</li>
+        <li class="js-text" title="Just JavaScript">JavaScript</li>
+        <li class="ts-text" title="Extention of JS">TypeScript</li>
+        <li class="angular-text" title="TypeScript Framework">Angular</li>
+        <li class="svg-text" title="Scalable Vector Graphics">SVG</li>
+        <li class="gsap-text" title="GreenSock library">GSAP</li>
+      </ul>
+      <div class="text-wrapper">
+        <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+        <p>ADDITIONAL SUPERPOWERS</p>
+        <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+      </div>
+      <article class="extra-abilities">
+        <div>
+          <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198015429-9983eaec-2ed7-4c37-81a0-371ccfe8267d.png" alt="learnability.png">
+        </div>
+        <div>
+          <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198016110-898d5b03-41bb-436d-84f8-7169980316cf.png" alt="mytraits.png">
+        </div>
+        <div>
+          <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198137478-545d3d45-f022-4166-a61d-6808a64ca33a.png" alt="extrovertability.png">
+        </div>
+        <div>
+          <img class="ability-image" src="https://user-images.githubusercontent.com/110595617/198139245-9d2d551f-774b-47a5-bd7c-3a8009ecf22e.png" alt="simple.png">
+        </div>
+      </article>
+    </section>
+    <div class="text-wrapper" id="projects">
+      <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+      <p> ALL THIS HELPED ME BUILD...</p>
+      <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
+    </div>
+    <section class="projects">
+      <h4>MY PROJECTS</h4>
+      <div class="project-wrapper">
+        <section class="project-overview-wrapper">
+          <div class="project-one">
+            <h5>Calculator</h5>
+            <p>After two months of learning I've created fully functional calculator. It was very fun project. You can change it's color to green if u want (toogle effects). Open with Git or Site -></p>
+            <p class="navigation-to-project"><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
+            <button class="show-photo" (click)="showCalcPhoto()" #calcimage> Show image</button>
+          </div>
+          <div class="project-two">
+            <h5>Online Bible App</h5>
+            <p>Online Bible App translated by King James.The project seems simple only on the surface. For me, it was a real challenge thanks to which I learned how to use Angular.Open with Git or Site -></p>
+            <p class="navigation-to-project"><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a href="https://kjv-online-bible.web.app/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
+            <button class="show-photo button" (click)="showBibleAppPhoto()"> Show image</button>
+          </div>   
+          <div class="project-three">
+            <h5>Coming soon..</h5>
+            <p>This project will be deployed soon</p>
+            <p class="loading"><fa-icon class="fa-2x" [icon]="spinnerIcon"></fa-icon></p>
+          </div>   
+        </section>
+      </div>
+    </section>
+  </main>
+  <div class="overlay" (click)="hideProjectsPhotos()"></div>
+  <img class="calculator-image" src="https://user-images.githubusercontent.com/110595617/198275378-ca3725e1-48db-4cab-bcdc-38e33bc4d2b4.png" alt="calculator">
+  <img class="bibleapp-image" src="https://user-images.githubusercontent.com/110595617/198352383-98241684-559b-488d-906a-ae6c83b6d1e4.png" alt="bibleimg1">
+  <button class="close-button" (click)="hideProjectsPhotos()">Close</button>
+  
