@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {faClock, faArrowDown, faDumbbell, faSpinner} from '@fortawesome/free-solid-svg-icons';
+import {faClock, faArrowDown, faDumbbell} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-main-page',
@@ -18,7 +18,6 @@ export class MainPageComponent implements OnInit {
   clockIcon = faClock;
   arrowDownIcon = faArrowDown;
   dumbellIcon = faDumbbell;
-  spinnerIcon = faSpinner;
 
   displayTimeSinceIStartedToCode() {
     setInterval(() => {

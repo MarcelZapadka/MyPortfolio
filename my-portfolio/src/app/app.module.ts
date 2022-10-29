@@ -6,7 +6,6 @@ import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MainPageComponent } from './main-page/main-page.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +21,3 @@ import { MainPageComponent } from './main-page/main-page.component';
   bootstrap: [AppComponent,]
 })
 export class AppModule {}
-
-
-
-

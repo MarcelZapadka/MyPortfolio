@@ -114,10 +114,10 @@ export class HeaderComponent implements OnInit {
   }
   
   ngOnInit(): void {
-    this.runBlobTextAnimations();
-    this.runTextAnimations();  
-    this.showBlobs();
-    this.runNavbarAndImageAnimations();
-    this.hideOverflowOnStart();
+    // this.runBlobTextAnimations();
+    // this.runTextAnimations();  
+    // this.showBlobs();
+    // this.runNavbarAndImageAnimations();
+    // this.hideOverflowOnStart();
   }
 }
