@@ -110,14 +110,14 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollToContact() {
-    document.getElementById("?")?.scrollIntoView({behavior:'smooth'});
+    window.scrollTo(0, 10000);
   }
   
   ngOnInit(): void {
-    // this.runBlobTextAnimations();
-    // this.runTextAnimations();  
-    // this.showBlobs();
-    // this.runNavbarAndImageAnimations();
-    // this.hideOverflowOnStart();
+    this.runBlobTextAnimations();
+    this.runTextAnimations();  
+    this.showBlobs();
+    this.runNavbarAndImageAnimations();
+    this.hideOverflowOnStart();
   }
 }

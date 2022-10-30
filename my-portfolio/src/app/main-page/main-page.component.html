@@ -26,7 +26,7 @@
       </ul>
       <div class="text-wrapper">
         <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
-        <p>ADDITIONAL SUPERPOWERS</p>
+        <p class="superpowers-text">ADDITIONAL SUPERPOWERS</p>
         <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
       </div>
       <article class="extra-abilities">
@@ -49,32 +49,28 @@
       <p> ALL THIS HELPED ME BUILD...</p>
       <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
     </div>
-    <section class="projects">
-      <h4>MY PROJECTS</h4>
-      <div class="project-wrapper">
-        <section class="project-overview-wrapper">
-          <div class="project-one">
-            <h5>Basic Calculator</h5>
-            <p>After two months of learning I've created fully functional calculator. It was very fun project. You can change it's color to green if u want (toogle effects). Open with Git or Site -></p>
-            <p class="navigation-to-project"><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
-            <button class="show-photo" (click)="showCalcPhoto()" #calcimage> Show image</button>
-          </div>
-          <div class="project-two">
-            <h5>Online Bible App</h5>
-            <p>Online Bible App translated by King James.The project seems simple only on the surface. For me, it was a real challenge thanks to which I learned how to use Angular.Open with Git or Site -></p>
-            <p class="navigation-to-project"><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a href="https://kjv-online-bible.web.app/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
-            <button class="show-photo" (click)="showBibleAppPhoto()"> Show image</button>
-          </div>   
-          <div class="project-three">
-            <h5>Coming soon...</h5>
-            <p>This project will be deployed soon. Loading in progress...</p>
-            <div class="loading"></div>
-            <p class="navigation-to-soon-project"><a><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git"></a><a><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="live"></a></p>
-            <button class="show-photo">Not available</button>
-          </div>   
-        </section>
+    <h5 class="my-projects-text">MY PROJECTS</h5>
+    <div class="projects">
+      <div class="project-one">
+        <p class="project-title">Basic Calculator</p>
+        <p class="project-info">After two months of learning I've created a fully functional calculator. It was a very fun project and I learned alot of JS here. You can change the color of the calculator thanks to toggle efects.</p>
+        <a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
+        <button class="show-project-button button-avaliable" (click)="showCalcPhoto()" #calcimage> Show image</button>
       </div>
-    </section>
+      <div class="project-two">
+        <p class="project-title">Online Bible App</p>
+        <p class="project-info">Online Bible App translated by King James. Works well for PC and also it's completly responsive for mobile users. Thanks to this project I became familiar with Angular and learned how to use it properly. </p>
+        <a href="https://github.com/MarcelZapadka/SecondProject---BIBLE-APP" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://kjv-online-bible.web.app/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
+        <button class="show-project-button button-avaliable" (click)="showBibleAppPhoto()"> Show image</button>
+      </div>
+      <div class="project-three">
+        <p class="project-title">Coming soon...</p>
+        <p class="project-info"> This project will be deployed soon. Working in progress...</p>
+        <div class="loading"></div>
+        <a><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon"></a><a><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
+        <button class="show-project-button"> Not-avaliable</button>
+      </div>
+    </div>
   </main>
   <div class="overlay" (click)="hideProjectsPhotos()"></div>
   <img class="calculator-image" src="https://user-images.githubusercontent.com/110595617/198275378-ca3725e1-48db-4cab-bcdc-38e33bc4d2b4.png" alt="calculator">

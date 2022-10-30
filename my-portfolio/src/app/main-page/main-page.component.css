@@ -3,7 +3,6 @@
     font-size: 2rem;
     text-align: center;
     padding: 2rem 1.5rem;
-    border-top: 1px solid black;
     font-weight: 900;
 }
 
@@ -121,100 +120,118 @@
 }
 
 .projects {
-    font-size: 5rem;
+    width: 100vw;
+    height: 65vh;
+    border-bottom: 2px solid black;
+    overflow-x: hidden;
     font-family: 'Teko', sans-serif;
-    text-align: left;
-    margin-top: 5rem;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    font-style: italic;
-}
-
-.projects h4 {
-    text-align: left;
-    transform: translate(-3rem, -3rem);
-}
-
-.projects ul {
-    list-style-type: none;
-    font-size: 3rem;
-    padding-left: 0;
-    max-width: rem;
-}
-
-.git {
-    max-width: 3rem;
-    border: 8px solid black;
-    border-radius: 50%;
-    transition-duration: 0.3s;
-    margin-right: 1.5rem;
-    background-color: white;
-}
-
-.git:hover {
-    background-color: beige;
-}
-
-.project-overview-wrapper {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+.my-projects-text {
+    font-size: 6rem;
+    margin: 2rem 0rem 0rem 5rem;
+    font-family: 'Teko', sans-serif;
+    font-style: italic;
 }
 
 .project-one,
 .project-two,
 .project-three {
+    width: 19rem;
     padding: 0.5rem 1.5rem 0rem 1.5rem;
     border-radius: 15px;
-    margin-right: 3rem;
-    transform: translateY(-3rem);
     border: 2px solid black;
-    background-color:rgb(0, 191, 144);
-    max-width: 35rem;
+    background-color:#333;
+    position: relative;
+    color: beige;
 }
 
-.project-three {
- background-color:rgba(220, 0, 0) ;
-}
-
-.project-three button {
-    cursor:not-allowed;
-    opacity: 0.6;
-}
-
-.project-overview-wrapper h5{
-    font-size: 3.5rem;
-    border-bottom: 2px solid black;
-}
-
-.project-overview-wrapper p{
-    padding-top: 1rem;
-    font-size: 1.6rem;
-    max-width: 20rem;
-}
-
-.live {
+.git-icon {
     max-width: 4rem;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+    margin-right: 1.5rem;
+    background-color: white;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 20%;
 }
 
-.navigation-to-project {
-    text-align: left;
+.website-icon {
+    max-width: 4rem;
+    margin-top: 1rem;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
 }
 
-.show-photo {
+.project-title {
+    font-size: 3.3rem;
+    border-bottom: 2px solid black;
+    position: absolute;
+}
+
+.project-info {
+    font-size: 1.5rem;
+    padding-top: 1.6rem;
+    padding-right: 1rem;
+    position: absolute;
+    top: 15%;
+}
+
+.show-project-button {
     font-size: 2rem;
     font-family: 'Teko', sans-serif;
-    min-width: 20rem;
+    width: 19rem;
     border-radius: 10px;
     border: 2px solid beige;
+    margin-top: 0.5rem;
     padding-top: 7px;
     cursor: pointer;
     transition-duration: 0.4s;
-    background-color: #333;
-    color: white;
+    background-color: black;
+    color: beige;
+    position: absolute;
+    bottom: 3%;
 }
 
-.show-photo:hover {
-    background-color: #111;
+.loading {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    animation: loading 2.5s infinite linear ;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 8px solid beige;
+    border-bottom: 8px solid black;
+}
+
+.project-three {
+    background-color:rgba(220, 0, 0) ;
+   }
+
+.project-three a {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.project-three button {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.button-avaliable:hover {
+    background-color: white;
+    color: black;
+}
+
+.git-avaliable:hover {
+    background-color: red;
 }
 
 .close-button {
@@ -231,23 +248,6 @@
     z-index: 2;
     transition-duration: 0.4s;
     border: 2px solid beige
-}
-
-.loading {
-    margin:3rem auto 2rem;
-    text-align: center;
-    animation: loading 2.5s infinite linear ;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 8px solid #333;
-    border-bottom: 8px solid rgb(0, 191, 144);;
-}
-
-.navigation-to-soon-project a {
-    opacity: 0.6;
-    cursor:not-allowed;
 }
 
 .overlay {

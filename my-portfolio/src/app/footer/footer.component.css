@@ -1,0 +1,24 @@
+.contact-info {
+    font-size: 4rem;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 20rem 1rem;
+}
+
+.contact-icons img {
+    width: 10rem;
+}
+
+.facebook-text,
+.linkedin-text {
+    text-align: center;
+    font-size:1.5rem;
+    margin-top: 0.5rem;
+    font-family: 'Montserrat';
+}
