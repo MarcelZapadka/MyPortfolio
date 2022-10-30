@@ -309,6 +309,33 @@ export class MainPageComponent implements OnInit {
       scrub:1,
     }, y:-30,opacity: 0, duration:1})
     
+    gsap.from(".my-projects-text", {scrollTrigger:{
+      trigger: ".my-projects-text",
+      start: "top 90%",
+      end: "top 20%",
+      scrub:1,
+    }, y:-30,opacity: 0, duration:1})
+
+    gsap.from(".project-one", {scrollTrigger:{
+      trigger: ".my-projects-text",
+      start: "top 70%",
+      end: "top top",
+      scrub:1,
+    },opacity: 0, duration:1})
+
+    gsap.from(".project-two", {scrollTrigger:{
+      trigger: ".my-projects-text",
+      start: "top 70%",
+      end: "top top",
+      scrub:1,
+    },opacity: 0, duration:1})
+
+    gsap.from(".project-three", {scrollTrigger:{
+      trigger: ".my-projects-text",
+      start: "top 70%",
+      end: "top top",
+      scrub:1,
+    },opacity: 0, duration:1})
   }
 
 
