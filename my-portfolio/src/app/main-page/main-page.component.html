@@ -49,12 +49,12 @@
       <p> ALL THIS HELPED ME BUILD...</p>
       <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
     </div>
-    <h5 class="my-projects-text">MY PROJECTS</h5>
+    <h5 class="my-projects-text">MY PROJECTS </h5>
     <div class="projects">
       <div class="project-one">
         <p class="project-title">Basic Calculator</p>
         <p class="project-info">After two months of learning I've created a fully functional calculator. It was a very fun project and I learned alot of JS here. You can change the color of the calculator thanks to toggle efects.</p>
-        <a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
+        <a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://marcelzapadka.github.io/FirstProject---CALCULATOR/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
         <button class="show-project-button button-avaliable" (click)="showCalcPhoto()" #calcimage> Show image</button>
       </div>
       <div class="project-two">
@@ -64,15 +64,15 @@
         <button class="show-project-button button-avaliable" (click)="showBibleAppPhoto()"> Show image</button>
       </div>
       <div class="project-three">
-        <p class="project-title">Coming soon...</p>
-        <p class="project-info"> This project will be deployed soon. Working in progress...</p>
-        <div class="loading"></div>
-        <a><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon"></a><a><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
-        <button class="show-project-button"> Not-avaliable</button>
+        <p class="project-title">Wiki-CatoPedia!</p>
+        <p class="project-info">All info about cats in one small place. CatoPedia, thanks to catAPI is using asynchronous JavaScript as it's primary weapon.</p>
+        <a href="https://github.com/MarcelZapadka/ThirdProject---CatoPedia" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://cato-pedia.web.app/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
+        <button class="show-project-button button-avaliable" (click)="showCatoPediaPhoto()"> Show image</button>
       </div>
     </div>
   </main>
   <div class="overlay" (click)="hideProjectsPhotos()"></div>
   <img class="calculator-image" src="https://user-images.githubusercontent.com/110595617/198275378-ca3725e1-48db-4cab-bcdc-38e33bc4d2b4.png" alt="calculator">
   <img class="bibleapp-image" src="https://user-images.githubusercontent.com/110595617/198352383-98241684-559b-488d-906a-ae6c83b6d1e4.png" alt="bibleimg1">
+  <img class="catopedia-image" src="https://user-images.githubusercontent.com/110595617/202706788-f659afe0-46c9-4bf6-aa31-ee542d4131bd.png" alt="catoPEdiaimg">
   <button class="close-button" (click)="hideProjectsPhotos()">Close</button>

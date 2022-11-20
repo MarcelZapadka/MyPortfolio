@@ -227,15 +227,26 @@ export class MainPageComponent implements OnInit {
     closeButton?.classList.add('active');
   }
 
+  showCatoPediaPhoto() {
+    const catoPediaPhoto = document.querySelector(".catopedia-image");
+    const overlay = document.querySelector(".overlay");
+    const closeButton = document.querySelector(".close-button");
+    catoPediaPhoto?.classList.add('active');
+    overlay?.classList.add('active');
+    closeButton?.classList.add('active');
+  }
+
   hideProjectsPhotos() {
       const calcPhoto = document.querySelector(".calculator-image");
       const overlay = document.querySelector(".overlay");
       const biblePhoto = document.querySelector(".bibleapp-image");
+      const catoPediaPhoto = document.querySelector(".catopedia-image");
       const closeButton = document.querySelector(".close-button");
       calcPhoto?.classList.remove('active');
       overlay?.classList.remove('active');
       biblePhoto?.classList.remove('active');
       closeButton?.classList.remove('active');
+      catoPediaPhoto?.classList.remove('active')
   }
 
   scrollTriggerAnimations() {
@@ -337,7 +348,6 @@ export class MainPageComponent implements OnInit {
       scrub:1,
     },opacity: 0, duration:1})
   }
-
 
   ngOnInit(): void {
     this.hoverMySkills();

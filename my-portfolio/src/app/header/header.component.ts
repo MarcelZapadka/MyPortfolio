@@ -112,12 +112,19 @@ export class HeaderComponent implements OnInit {
   scrollToContact() {
     window.scrollTo(0, 10000);
   }
-  
-  ngOnInit(): void {
-    this.runBlobTextAnimations();
+
+  runAllAnimations() {
+    if (window.innerWidth > 650) {
+      this.runBlobTextAnimations();
     this.runTextAnimations();  
     this.showBlobs();
     this.runNavbarAndImageAnimations();
+    } else return
+  }
+  
+  ngOnInit(): void {
     this.hideOverflowOnStart();
+    this.runAllAnimations();
+    console.log(window.innerWidth)
   }
 }
