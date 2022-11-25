@@ -18,10 +18,11 @@
     border-bottom: 1px solid #333;
 }
 
-.navbar ul {
+.list {
     padding-inline-start: 0rem;
     display: flex;
-    justify-content: space-around;  
+    justify-content: space-around; 
+    transition: 0.4s ease-in-out; 
 }
 
 .navbar li {
@@ -296,6 +297,84 @@ h1 {
     transform: translate(40.8rem, 0.5rem);
     font-size: 10px;
     opacity: 0;
+}
+
+.phone-mode {
+    display: none;
+}
+
+@media (max-width: 430px) {
+    .phone-mode {
+        display: block;
+    }
+
+    .info,
+    .image,
+    .logo,
+    .navbar {
+        display: none;
+    }
+
+    .phone-mode {
+        height: 43rem;
+    }
+
+    .phone-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        height: 3rem;
+        margin-top: 1rem;
+        border-bottom: 2px solid #333;
+        padding-bottom: 0.5rem;
+    }
+
+    .logo-phone {
+        width: 130px;
+    }
+
+    .burger {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        transition: 0.4s ease-in-out;
+    }
+
+    .line {
+        width: 2.3rem;
+        height: 0.4rem;
+        background-color: #522546;
+        margin: 0.4rem 0.2rem;
+        border-radius: 10px;
+    }
+
+    .phone-info-wrapper {
+        font-size: 2rem;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .phone-info-list { 
+        margin-left: -1rem;
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        text-align: center;
+        list-style: none;
+        font-family: 'Montserrat', sans-serif;
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        grid-template-rows: 5rem 5rem;
+        z-index: 1;
+    }
+
+    .phone-image {
+        width: 300px;
+        margin-left: 2.5rem;
+        transform: translateY(-3.5rem);
+        z-index: -1;
+    }
+
 }
 
 @keyframes svg-animation {

@@ -1,5 +1,5 @@
-<nav class="navbar">
-  <ul>
+<nav class="navbar" id="navbar">
+  <ul id="list" class="list">
     <li (click)="scrollToAboutMe()">Who am I?  <fa-icon [icon]="aboutIcon"></fa-icon></li>
     <li (click)="scrollToSkills()">My skills <fa-icon [icon]="starIcon"></fa-icon></li>
     <li (click)="scrollToProjects()">My Projects <fa-icon [icon]="flaskIcon"></fa-icon></li>
@@ -121,4 +121,25 @@
     </div>
   </div>
   <div class="image"></div>
+  <div class="phone-mode">
+    <nav class="phone-nav">
+      <img class="logo-phone" src="https://user-images.githubusercontent.com/110595617/203545073-aeab5f97-849e-4680-b3ba-33132769795d.png" alt="logo">
+      <button class="burger" id="burger" (click)="burgerr()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </button>
+    </nav>
+    <div class="phone-info-wrapper">
+      <p>Marcel Zapadka</p>
+      <p>Junior Frontend Developer</p>
+    </div>
+    <ul class="phone-info-list">
+      <li>20 years old</li>
+      <li>A believer</li>
+      <li>#Poland</li>
+      <li>Husband</li>
+    </ul>
+    <img class="phone-image" src="https://user-images.githubusercontent.com/110595617/196046921-21b0d483-2ecc-4ddc-985e-b7bf3c0d3fd1.jpg" alt="image">
+  </div>
 </header>

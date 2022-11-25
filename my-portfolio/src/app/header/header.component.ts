@@ -15,18 +15,23 @@ export class HeaderComponent implements OnInit {
   aboutIcon = faAddressCard;
   flaskIcon = faFlask;
   phoneIcon = faPhone;
-
+  
   hideOverflowOnStart() {
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
+    if (window.innerWidth > 650) {
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+          document.body.style.overflowY = "visible";
+        }
+      })
+      document.body.style.overflowX = "hidden";
+      document.body.style.overflowY = "hidden";
+      setTimeout(() => {
         document.body.style.overflowY = "visible";
-      }
-    })
-    document.body.style.overflowX = "hidden";
-    document.body.style.overflowY = "hidden";
-    setTimeout(() => {
-      document.body.style.overflowY = "visible";
-    }, 10000)
+      }, 10000)
+    } else {
+      document.body.style.overflowX = "hidden";
+    }
+    
   }
 
   runTextAnimations() {
@@ -113,6 +118,15 @@ export class HeaderComponent implements OnInit {
     window.scrollTo(0, 10000);
   }
 
+  burgerr() {
+  let burger: HTMLElement = document.getElementById("burger")!;
+  let navbar: HTMLElement = document.getElementById("navbar")!;
+  let list: HTMLElement = document.getElementById("list")!;
+  list.classList.toggle("active")
+   navbar.classList.toggle("active")
+   burger.classList.toggle("active")
+  }
+
   runAllAnimations() {
     if (window.innerWidth > 650) {
       this.runBlobTextAnimations();
@@ -122,9 +136,10 @@ export class HeaderComponent implements OnInit {
     } else return
   }
   
+
   ngOnInit(): void {
     this.hideOverflowOnStart();
     this.runAllAnimations();
-    console.log(window.innerWidth)
+    console.log(window.innerWidth);
   }
 }

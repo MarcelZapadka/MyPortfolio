@@ -6,24 +6,42 @@
       <p>During this time I have learned these:</p>
     </article>
     <section>
-      <ul class="skills-icons">
-        <li title="HyperText Markup Language"><img class="html-icon" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTMLlogo"></li>
-        <li title="Cascading Style Sheets"><img class="css-icon" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSSlogo"></li>
-        <li title="Just JavaScript"><img class="js-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JSlogo"></li>
-        <li title="Extention of JS"><img class="ts-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="TSlogo"></li>
-        <li title="TypeScript Framework"><img class="angular-icon" src="https://seeklogo.com/images/A/angular-logo-B76B1CDE98-seeklogo.com.png" alt="ANGULARlogo"></li>
-        <li title="Scalable Vector Graphics"><img class="svg-icon" src="https://cdn-icons-png.flaticon.com/512/1432/1432641.png" alt="SVGlogo"></li>
-        <li title="GreenSock library"><img class="gsap-icon" src="https://user-images.githubusercontent.com/110595617/197568647-711c69af-da81-4606-b074-abd56f9961e3.png" alt="GSAPogo"></li>
-      </ul>
-      <ul class="skills">
-        <li class="html-text" title="HyperText Markup Language">HTML</li>
-        <li class="css-text" title="Cascading Style Sheets">CSS</li>
-        <li class="js-text" title="Just JavaScript">JavaScript</li>
-        <li class="ts-text" title="Extention of JS">TypeScript</li>
-        <li class="angular-text" title="TypeScript Framework">Angular</li>
-        <li class="svg-text" title="Scalable Vector Graphics">SVG</li>
-        <li class="gsap-text" title="GreenSock library">GSAP</li>
-      </ul>
+      <div class="skills-section">
+        <div class="html-skill skill">
+          <img class="skills-icons html-icon" src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTMLlogo" title="HyperText Markup Language">
+          <p class="skills-text html-text" title="HyperText Markup Language">HTML</p>
+        </div>
+          
+        <div class="css-skill skill">
+        <img title="Cascading Style Sheets" class="skills-icons css-icon" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSSlogo">
+        <p class="skills-text" title="Cascading Style Sheets">CSS</p>
+        </div>
+
+        <div class="js-skill skill">
+          <img title="Just JavaScript" class="skills-icons js-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JSlogo">
+          <p class="skills-text js-text" title="Just JavaScript">JavaScript</p>
+        </div>
+
+        <div class="ts-skill skill">
+        <img title="Extention of JS" class="skills-icons ts-icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="TSlogo">
+        <p class="skills-text ts-text" title="Extention of JS">TypeScript</p>
+        </div>
+
+        <div class="angular-skill skill">
+          <img title="TypeScript Framework" class="skills-icons angular-icon" src="https://seeklogo.com/images/A/angular-logo-B76B1CDE98-seeklogo.com.png" alt="ANGULARlogo">
+          <p clas class="skills-text angular-text" title="TypeScript Framework">Angular</p>
+        </div>
+
+        <div class="svg-skill skill">
+          <img title="Scalable Vector Graphics" class="skills-icons svg-icon" src="https://cdn-icons-png.flaticon.com/512/1432/1432641.png" alt="SVGlogo">
+          <p class="skills-text svg-text" title="Scalable Vector Graphics">SVG</p>
+        </div>
+
+        <div class="gsap-skill skill">
+          <img title="GreenSock library" class="skills-icons gsap-icon" src="https://user-images.githubusercontent.com/110595617/197568647-711c69af-da81-4606-b074-abd56f9961e3.png" alt="GSAPogo">
+          <p class="skills-text gsap-text" title="GreenSock library">GSAP</p>
+        </div>
+      </div> 
       <div class="text-wrapper">
         <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
         <p class="superpowers-text">ADDITIONAL SUPERPOWERS</p>
@@ -44,26 +62,27 @@
         </div>
       </article>
     </section>
-    <div class="text-wrapper" id="projects">
+    <div class="text-wrapper wrapper-bottom" id="projects">
       <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
-      <p> ALL THIS HELPED ME BUILD...</p>
+      <p class="help-text"> ALL THIS HELPED ME BUILD...</p>
       <fa-icon class="fa-6x dumbell" [icon]="dumbellIcon"></fa-icon>
     </div>
+    <fa-icon class="fa-4x" id="arrow" [icon]="arrowDownIcon"></fa-icon>
     <h5 class="my-projects-text">MY PROJECTS </h5>
-    <div class="projects">
-      <div class="project-one">
+    <div class="projects-wrapper">
+      <div class="project">
         <p class="project-title">Basic Calculator</p>
         <p class="project-info">After two months of learning I've created a fully functional calculator. It was a very fun project and I learned alot of JS here. You can change the color of the calculator thanks to toggle efects.</p>
         <a href="https://github.com/MarcelZapadka/FirstProject---CALCULATOR" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://marcelzapadka.github.io/FirstProject---CALCULATOR/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
         <button class="show-project-button button-avaliable" (click)="showCalcPhoto()" #calcimage> Show image</button>
       </div>
-      <div class="project-two">
+      <div class="project">
         <p class="project-title">Online Bible App</p>
         <p class="project-info">Online Bible App translated by King James. Works well for PC and also it's completly responsive for mobile users. Thanks to this project I became familiar with Angular and learned how to use it properly. </p>
         <a href="https://github.com/MarcelZapadka/SecondProject---BIBLE-APP" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://kjv-online-bible.web.app/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
         <button class="show-project-button button-avaliable" (click)="showBibleAppPhoto()"> Show image</button>
       </div>
-      <div class="project-three">
+      <div class="project">
         <p class="project-title">Wiki-CatoPedia!</p>
         <p class="project-info">All info about cats in one small place. CatoPedia, thanks to catAPI is using asynchronous JavaScript as it's primary weapon.</p>
         <a href="https://github.com/MarcelZapadka/ThirdProject---CatoPedia" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="githublink" class="git-icon git-avaliable"></a><a href="https://cato-pedia.web.app/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1006/1006669.png" alt="livedemo" class="website-icon"></a>
