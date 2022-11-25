@@ -1,2 +1,2 @@
 # MyPortfolio
- Very beggining of my personal portfolio, nothing to see yet
+Project is not finished yet but you can se it at this page: https://marcelzapadka-portfolio.web.app/
