@@ -83,58 +83,16 @@ export class MainPageComponent implements OnInit {
       scrub:2,
     }, y:-40,opacity: 0, duration:1})
 
-    gsap.from(".html-icon", { scrollTrigger: {
+    gsap.from(".skill", { scrollTrigger: {
       trigger: ".timer",
       start: "top 50%",
       end: "bottom 65%",
       scrub:true,
     }, y:-20,opacity: 0, duration:0.7 })
 
-    gsap.from(".css-icon", { scrollTrigger: {
-      trigger: ".timer",
-      start: "top 50%",
-      end: "bottom 65%",
-      scrub:true,
-    }, y:-20,opacity: 0, duration:0.7, delay: 0.1 })
-
-    gsap.from(".js-icon", { scrollTrigger: {
-      trigger: ".timer",
-      start: "top 50%",
-      end: "bottom 65%",
-      scrub:true,
-    }, y:-20,opacity: 0, duration:0.7, delay: 0.2 })
-
-    gsap.from(".ts-icon", { scrollTrigger: {
-      trigger: ".timer",
-      start: "top 50%",
-      end: "bottom 65%",
-      scrub:true,
-    }, y:-20,opacity: 0, duration:0.7, delay: 0.3 })
-
-    gsap.from(".angular-icon", { scrollTrigger: {
-      trigger: ".timer",
-      start: "top 50%",
-      end: "bottom 65%",
-      scrub:true,
-    }, y:-20,opacity: 0, duration:0.7, delay: 0.4 })
-
-    gsap.from(".svg-icon", { scrollTrigger: {
-      trigger: ".timer",
-      start: "top 50%",
-      end: "bottom 65%",
-      scrub:true,
-    }, y:-20,opacity: 0, duration:0.7, delay: 0.5 })
-
-    gsap.from(".gsap-icon", { scrollTrigger: {
-      trigger: ".timer",
-      start: "top 50%",
-      end: "bottom 55%",
-      scrub:true,
-    }, y:-20,opacity: 0, duration:0.7, delay: 0.6})
-
     gsap.from(".text-wrapper", {scrollTrigger:{
       trigger: ".superpowers-text",
-      start: "top 60%",
+      start: "top 65%",
       end: "top 20%",
       scrub:1,
     }, y:-40,opacity: 0, duration:1})
@@ -153,21 +111,7 @@ export class MainPageComponent implements OnInit {
       scrub:1,
     }, y:-30,opacity: 0, duration:1})
 
-    gsap.from(".project-one", {scrollTrigger:{
-      trigger: ".my-projects-text",
-      start: "top 70%",
-      end: "top top",
-      scrub:1,
-    },opacity: 0, duration:1})
-
-    gsap.from(".project-two", {scrollTrigger:{
-      trigger: ".my-projects-text",
-      start: "top 70%",
-      end: "top top",
-      scrub:1,
-    },opacity: 0, duration:1})
-
-    gsap.from(".project-three", {scrollTrigger:{
+    gsap.from(".project", {scrollTrigger:{
       trigger: ".my-projects-text",
       start: "top 70%",
       end: "top top",

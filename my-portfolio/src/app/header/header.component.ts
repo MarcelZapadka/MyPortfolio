@@ -104,27 +104,40 @@ export class HeaderComponent implements OnInit {
 
   scrollToAboutMe() {
     window.scrollTo(0, 0);
+    this.hideMenu();
   }
 
   scrollToSkills() {
     document.getElementById("skills")?.scrollIntoView({behavior:'smooth'});
+    this.hideMenu();
   }
 
   scrollToProjects() {
     document.getElementById("projects")?.scrollIntoView({behavior:'smooth'});
+    this.hideMenu();
   }
 
   scrollToContact() {
     window.scrollTo(0, 10000);
+    this.hideMenu();
   }
 
-  burgerr() {
-  let burger: HTMLElement = document.getElementById("burger")!;
-  let navbar: HTMLElement = document.getElementById("navbar")!;
-  let list: HTMLElement = document.getElementById("list")!;
-  list.classList.toggle("active")
-   navbar.classList.toggle("active")
-   burger.classList.toggle("active")
+  showMenu() {
+    let burger: HTMLElement = document.getElementById("burger")!;
+    let navbar: HTMLElement = document.getElementById("navbar")!;
+    let list: HTMLElement = document.getElementById("list")!;
+    let ghostBurger: HTMLElement = document.getElementById("ghost")!;
+    ghostBurger.classList.toggle("active")
+    list.classList.toggle("active");
+    navbar.classList.toggle("active");
+    burger.classList.toggle("active");
+    document.body.style.overflowY = "hidden"
+  }
+
+  hideMenu() {
+    this.showMenu();
+    document.body.style.overflowY = "visible"
+    
   }
 
   runAllAnimations() {
