@@ -1,3 +1,4 @@
+/* Skills section styling */
 .timer {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
@@ -72,6 +73,7 @@
     margin: 20px;
 }
 
+/* Projects styling */
 .projects-wrapper {
     width: 100vw;
     height: 65vh;
@@ -250,6 +252,7 @@
     display: none;
 }
 
+/* Media queries on phone device */
 @media (max-width: 430px) {
     .skills-section {
         border-bottom: 2px solid #333;
@@ -326,6 +329,10 @@
     .ability-image {
         margin: 2rem 0rem;
     }
+
+    .close-button.active {
+        top: 15%;
+    }
 }
 
 @media (max-width: 344px) {
@@ -334,22 +341,12 @@
     }
 }    
 
-    @media (max-width: 333px) {
-        .project-title {
-            font-size: 2.5rem;
-        }
-
-        .show-project-button {
-            width: 15rem;
-        }
-}
-
-@keyframes loading {
-    0% {
-        transform: rotate(0deg);
+@media (max-width: 333px) {
+    .project-title {
+    font-size: 2.5rem;
     }
 
-    100% {
-        transform: rotate(360deg);
+    .show-project-button {
+    width: 15rem;
     }
 }

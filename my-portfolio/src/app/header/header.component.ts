@@ -15,7 +15,9 @@ export class HeaderComponent implements OnInit {
   aboutIcon = faAddressCard;
   flaskIcon = faFlask;
   phoneIcon = faPhone;
-  
+
+
+  //Disable scrolling while animations are in progress
   hideOverflowOnStart() {
     if (window.innerWidth > 650) {
       window.addEventListener("keydown", (event) => {
@@ -34,6 +36,7 @@ export class HeaderComponent implements OnInit {
     
   }
 
+  //Enable text intro animations
   runTextAnimations() {
     window.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
@@ -50,6 +53,7 @@ export class HeaderComponent implements OnInit {
     const phaseFour= gsap.to(".skip-animations-info", {opacity: 1, delay:12});
   }  
 
+  //Enable navigation bar and image intro animations 
   runNavbarAndImageAnimations() {
     window.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
@@ -67,6 +71,7 @@ export class HeaderComponent implements OnInit {
    const phaseFour = gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:10});
     }
   
+    //Show blobs when all intro animations ends
    showBlobs() {
     window.addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
@@ -94,6 +99,7 @@ export class HeaderComponent implements OnInit {
     const phaseTen = gsap.to(".blob-five-text", {opacity:1, duration: 3.25, delay:13.8});
   }  
 
+  //Enable blob intro animations
   runBlobTextAnimations() {
     gsap.to(".blob-one-text", { y: -10, duration: 3, ease: "none", yoyo:true, repeat: -1});
     gsap.to(".blob-two-text", { x: 10, duration: 3, ease: "none", yoyo:true, repeat: -1});
@@ -102,6 +108,7 @@ export class HeaderComponent implements OnInit {
     gsap.to(".blob-five-text", { y: -10, x: 5, duration: 3, ease: "none", yoyo:true, repeat: -1});
   }
 
+  //Adding smooth scroll funcionality to navbar
   scrollToAboutMe() {
     window.scrollTo(0, 0);
     this.hideMenu();
@@ -122,6 +129,7 @@ export class HeaderComponent implements OnInit {
     this.hideMenu();
   }
 
+  // PHONE MODE - opens burger menu
   showMenu() {
     let burger: HTMLElement = document.getElementById("burger")!;
     let navbar: HTMLElement = document.getElementById("navbar")!;
@@ -134,12 +142,14 @@ export class HeaderComponent implements OnInit {
     document.body.style.overflowY = "hidden"
   }
 
+  // PHONE MODE - quits burger menu
   hideMenu() {
     this.showMenu();
     document.body.style.overflowY = "visible"
     
   }
 
+  // If on PC - run all inttro animations, if on phone return
   runAllAnimations() {
     if (window.innerWidth > 650) {
       this.runBlobTextAnimations();
@@ -149,7 +159,6 @@ export class HeaderComponent implements OnInit {
     } else return
   }
   
-
   ngOnInit(): void {
     this.hideOverflowOnStart();
     this.runAllAnimations();

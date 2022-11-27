@@ -23,6 +23,7 @@ export class MainPageComponent implements OnInit {
   arrowDownIcon = faArrowDown;
   dumbellIcon = faDumbbell;
 
+  // Turns on a clock that counts down how much time I'm learning programming
   displayTimeSinceIStartedToCode() {
     setInterval(() => {
        this.startingDate = new Date("June 16, 2022 08:00:00").getTime();
@@ -35,6 +36,7 @@ export class MainPageComponent implements OnInit {
     }, 1000)
   }
 
+  // Show project photo on click
   showCalcPhoto() {
       const calcPhoto = document.querySelector(".calculator-image");
       const overlay = document.querySelector(".overlay");
@@ -44,6 +46,7 @@ export class MainPageComponent implements OnInit {
       closeButton?.classList.add('active');
   }
 
+  // Show project photo on click
   showBibleAppPhoto() {
     const biblePhoto = document.querySelector(".bibleapp-image");
     const overlay = document.querySelector(".overlay");
@@ -53,6 +56,7 @@ export class MainPageComponent implements OnInit {
     closeButton?.classList.add('active');
   }
 
+  // Show project photo on click
   showCatoPediaPhoto() {
     const catoPediaPhoto = document.querySelector(".catopedia-image");
     const overlay = document.querySelector(".overlay");
@@ -62,6 +66,7 @@ export class MainPageComponent implements OnInit {
     closeButton?.classList.add('active');
   }
 
+  // Hide project photo on click
   hideProjectsPhotos() {
       const calcPhoto = document.querySelector(".calculator-image");
       const overlay = document.querySelector(".overlay");
@@ -75,6 +80,7 @@ export class MainPageComponent implements OnInit {
       catoPediaPhoto?.classList.remove('active')
   }
 
+  // Enable GSAP scrolltrigger animations
   scrollTriggerAnimations() {
     gsap.from(".timer", { scrollTrigger: {
       trigger: ".timer",
