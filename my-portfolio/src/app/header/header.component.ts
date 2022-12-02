@@ -19,84 +19,34 @@ export class HeaderComponent implements OnInit {
 
   //Disable scrolling while animations are in progress
   hideOverflowOnStart() {
-    if (window.innerWidth > 650) {
-      window.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          document.body.style.overflowY = "visible";
-        }
-      })
-      document.body.style.overflowX = "hidden";
-      document.body.style.overflowY = "hidden";
-      setTimeout(() => {
-        document.body.style.overflowY = "visible";
-      }, 10000)
-    } else {
-      document.body.style.overflowX = "hidden";
-    }
+    document.body.style.overflowX = "hidden"
     
   }
 
   //Enable text intro animations
   runTextAnimations() {
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        phaseOne.progress(0.9,false);
-        phaseTwo.progress(0.9,false);
-        phaseThree.progress(0.9,false);
-        phaseFour.progress(0.9, false);
-      }
-    })
-    gsap.to(".name", {translateX: 350, duration: 0.1})
-    const phaseOne = gsap.to(".name", {text: "Marcel Zapadka",delay: 2, duration:2, onStart: this.scrollToAboutMe});
-    const phaseTwo = gsap.from(".logo", {x:200, delay:9, duration:1.6});
-    const phaseThree = gsap.from(".name", {translateX: 350, duration: 1.6, fontSize: "7rem", delay:8.5});
-    const phaseFour= gsap.to(".skip-animations-info", {opacity: 1, delay:12});
+    gsap.from(".name", {opacity: 0,delay:1, duration:0.5});
   }  
 
-  //Enable navigation bar and image intro animations 
+  //Enable navigation bar and image intro animations, provide skip animations
   runNavbarAndImageAnimations() {
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        phaseOne.progress(0.9,false);
-        phaseTwo.progress(0.9,false);
-        phaseThree.progress(0.9,false);
-        phaseFour.progress(0.9,false);
-        gsap.from(".image", {x:2000, duration:0.15,});
-        gsap.from(".navbar", {x:3000, duration:0.15});
-      }
-    })
-   const phaseOne = gsap.to(".navbar", {opacity:1, duration: 0.01, delay:9.9});
-   const phaseTwo = gsap.to(".image", {opacity: 1, duration: 0.01, delay:9.9});
-   const phaseThree =  gsap.from(".navbar", {x:3000, duration:3, ease:"elastic.out(1, 0.75)", delay:10});
-   const phaseFour = gsap.from(".image", {x:2000, duration:3.3, ease:"elastic.out(1, 1)", delay:10});
+    gsap.from(".navbar", {opacity:0, duration: 0.7, delay:0.3, y: -20});
+    gsap.from(".image", {opacity: 0, duration: 0.7, delay:0.3, y:20});
+
     }
   
     //Show blobs when all intro animations ends
    showBlobs() {
-    window.addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        phaseOne.progress(0.9,false);
-        phaseTwo.progress(0.9,false);
-        phaseThree.progress(0.9,false);
-        phaseFour.progress(0.9,false);
-        phaseFive.progress(0.9,false);
-        phaseSix.progress(0.9,false);
-        phaseSeven.progress(0.9,false);
-        phaseEight.progress(0.9,false);
-        phaseNine.progress(0.9,false);
-        phaseTen.progress(0.9,false);
-      }
-    })
-    const phaseOne = gsap.to(".blob-one", {opacity:1, duration: 3.25, delay:12});
-    const phaseTwo = gsap.to(".blob-one-text", {opacity:1, duration: 3.25, delay:12.2});
-    const phaseThree = gsap.to(".blob-two", {opacity:1, duration: 3.25, delay:12.4});
-    const phaseFour = gsap.to(".blob-two-text", {opacity:1, duration: 3.25, delay:12.6});
-    const phaseFive = gsap.to(".blob-three", {opacity:1, duration: 3.25, delay:12.8});
-    const phaseSix = gsap.to(".blob-three-text", {opacity:1, duration: 3.25, delay:13});
-    const phaseSeven = gsap.to(".blob-four", {opacity:1, duration: 3.25, delay:13.2});
-    const phaseEight = gsap.to(".blob-four-text", {opacity:1, duration: 3.25, delay:13.4});
-    const phaseNine = gsap.to(".blob-five", {opacity:1, duration: 3.25, delay:13.6});
-    const phaseTen = gsap.to(".blob-five-text", {opacity:1, duration: 3.25, delay:13.8});
+    gsap.from(".blob-one", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-one-text", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-two", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-two-text", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-three", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-three-text", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-four", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-four-text", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-five", {opacity:0, duration: 0.5, delay:1});
+    gsap.from(".blob-five-text", {opacity:0, duration: 0.5, delay:1});
   }  
 
   //Enable blob intro animations
@@ -149,19 +99,25 @@ export class HeaderComponent implements OnInit {
     
   }
 
-  // If on PC - run all inttro animations, if on phone return
+  runPhoneIntroAnimations() {
+    gsap.from(".phone-info-wrapper", {y: -20, opacity:0, delay:0.5, duration: 1})
+    gsap.from(".phone-info-list", {x: -20, opacity:0, delay: 0.5, duration:1})
+    gsap.from(".phone-image", {y: 20, opacity:0, delay: 0.5, duration:1})
+    gsap.from(".phone-nav", {y: -20, opacity:0, delay: 0.5, duration:1})
+  }
+
+  // Run different animations depend of if user is on PC or Mobile
   runAllAnimations() {
     if (window.innerWidth > 650) {
       this.runBlobTextAnimations();
     this.runTextAnimations();  
     this.showBlobs();
     this.runNavbarAndImageAnimations();
-    } else return
+    } else this.runPhoneIntroAnimations();
   }
   
   ngOnInit(): void {
     this.hideOverflowOnStart();
-    this.runAllAnimations();
-    console.log(window.innerWidth);
+    this.runAllAnimations();  
   }
 }

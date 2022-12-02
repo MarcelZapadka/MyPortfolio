@@ -13,7 +13,7 @@
     position: sticky;
     top: 0;
     background-color: white;
-    opacity: 0;
+    opacity: 1;
     overflow: hidden;
     z-index: 1;
     border-bottom: 1px solid #333;
@@ -64,7 +64,7 @@ h1 {
     position: relative;
     z-index: -1;
     transform: translate(10%,-10%);
-    opacity: 0;
+    opacity: 1;
 }
 
 .blob-one-text {
@@ -72,7 +72,7 @@ h1 {
     top: 4rem;
     font-size: 1.4rem;
     left: 8.5rem;
-    opacity: 0;
+    opacity: 1;
 }
 
 #blob-two {
@@ -80,7 +80,7 @@ h1 {
     position: relative;
     transform: translate(-10%, 40%);
     z-index: -1;
-    opacity: 0;
+    opacity: 1;
 }
 
 .blob-two-text {
@@ -88,7 +88,7 @@ h1 {
     top: 10.5rem;
     left: 25rem;
     font-size: 1.4rem;
-    opacity: 0;
+    opacity: 1;
 }
 
 #blob-three {
@@ -96,7 +96,7 @@ h1 {
     width: 20rem;
     transform: translate(180%, -100% );
     z-index: -1;
-    opacity: 0;
+    opacity: 1;
 }
 
 .blob-three-text {
@@ -105,7 +105,7 @@ h1 {
     left: 42rem;
     font-size: 1.4rem;
     min-width: 9rem;
-    opacity: 0;
+    opacity: 1;
 }
 
 #blob-four {
@@ -113,7 +113,7 @@ h1 {
     width: 20rem;
     z-index: -1;
     transform: translate(45%);
-    opacity: 0;
+    opacity: 1;
 }
 
 .blob-four-text {
@@ -121,7 +121,7 @@ h1 {
     font-size: 1.4rem;
     top: 19rem;
     left: 36.2rem;
-    opacity: 0;
+    opacity: 1;
 }
 
 #blob-five {
@@ -129,7 +129,7 @@ h1 {
     width: 20rem;
     z-index: -1;
     transform: translate(20%,-110%);
-    opacity: 0;
+    opacity: 1;
 }
 
 .blob-five-text {
@@ -137,7 +137,7 @@ h1 {
     font-size: 1.4rem;
     top: 18rem;
     left: 10rem;
-    opacity: 0;
+    opacity: 1;
 }
 
 .blobs  p {
@@ -151,7 +151,7 @@ h1 {
     min-width: 32rem;
     min-height: 44rem;
     z-index: -1;
-    opacity: 0;
+    opacity: 1;
     position: sticky;
     right: 0;
 }
@@ -160,145 +160,139 @@ h1 {
 .stroke-1 {
     stroke-dasharray: 155px;
     stroke-dashoffset: 155px ;
-    animation: svg-animation 2s ease forwards 3.1s, fill 1.9s ease forwards 5s; 
+    animation: svg-animation 2s ease forwards 1.4s, fill 1.9s ease forwards 2.5s; 
 }
 
 .stroke-2 {
     stroke-dasharray: 190px;
     stroke-dashoffset: 190px;
-    animation: svg-animation 2s ease forwards 3.2s, fill 1.9s ease forwards 5.1s; 
+    animation: svg-animation 2s ease forwards 1.5s, fill 1.9s ease forwards 2.6s; 
 }
 
 .stroke-3 {
     stroke-dasharray: 400px;
     stroke-dashoffset: 400px ;
-    animation: svg-animation 2s ease forwards 3.3s, fill 1.9s ease forwards 5.2s; 
+    animation: svg-animation 2s ease forwards 1.6s, fill 1.9s ease forwards 2.7s; 
 }
 
 .stroke-4 {
     stroke-dasharray: 120px;
     stroke-dashoffset: 120px ;
-    animation: svg-animation 2s ease forwards 3.4s, fill 1.9s ease forwards 5.3s; 
+    animation: svg-animation 2s ease forwards 1.7s, fill 1.9s ease forwards 2.8s; 
 }
 
 .stroke-5 {
     stroke-dasharray: 170px;
     stroke-dashoffset: 170px;
-    animation: svg-animation 2s ease forwards 3.5s, fill 1.9s ease forwards 5.4s; 
+    animation: svg-animation 2s ease forwards 1.8s, fill 1.9s ease forwards 2.9s; 
 }
 
 .stroke-6 {
     stroke-dasharray: 160px;
     stroke-dashoffset: 160px;
-    animation: svg-animation 2s ease forwards 3.6s, fill 1.9s ease forwards 5.5s; 
+    animation: svg-animation 2s ease forwards 1.9s, fill 1.9s ease forwards 3s; 
 }
 
 .stroke-7 {
     stroke-dasharray: 155px;
     stroke-dashoffset: 155px;
-    animation: svg-animation 2s ease forwards 3.7s, fill 1.9s ease forwards 5.6s; 
+    animation: svg-animation 2s ease forwards 2s, fill 1.9s ease forwards 3.1s; 
 }
 
 .stroke-8 {
     stroke-dasharray: 155px;
     stroke-dashoffset: 155px ;
-    animation: svg-animation 2s ease forwards 3.8s, fill 1.9s ease forwards 5.7s; 
+    animation: svg-animation 2s ease forwards 2.1s, fill 1.9s ease forwards 3.2s; 
 }
 
 .stroke-9 {
     stroke-dasharray: 155px;
     stroke-dashoffset: 155px;
-    animation: svg-animation 2s ease forwards 3.9s, fill 1.9s ease forwards 5.8s; 
+    animation: svg-animation 2s ease forwards 2.2s, fill 1.9s ease forwards 3.3s; 
 }
 
 .stroke-10 {
     stroke-dasharray: 250px;
     stroke-dashoffset: 250px;
-    animation: svg-animation 2s ease forwards 4s, fill 1.9s ease forwards 5.9s;
+    animation: svg-animation 2s ease forwards 2.3s, fill 1.9s ease forwards 3.4s;
 }
 
 .stroke-11 {
     stroke-dasharray: 155px;
     stroke-dashoffset: 155px;
-    animation: svg-animation 2s ease forwards 4.1s, fill 1.9s ease forwards 6s; 
+    animation: svg-animation 2s ease forwards 2.4s, fill 1.9s ease forwards 3.5s; 
 }
 
 .stroke-12 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 4.2s, fill 1.9s ease forwards 6.1s; 
+    animation: svg-animation 2s ease forwards 2.5s, fill 1.9s ease forwards 3.6s; 
 }
 
 .stroke-13 {
     stroke-dasharray: 259px;
     stroke-dashoffset: 259px;
-    animation: svg-animation 2s ease forwards 4.3s, fill 1.9s ease forwards 6.2s; 
+    animation: svg-animation 2s ease forwards 2.6s, fill 1.9s ease forwards 3.7s; 
 }
 
 .stroke-14 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 4.4s, fill 1.9s ease forwards 6.3s; 
+    animation: svg-animation 2s ease forwards 2.7s, fill 1.9s ease forwards 3.8s; 
 }
 
 .stroke-15 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 4.5s, fill 1.9s ease forwards 6.4s; 
+    animation: svg-animation 2s ease forwards 2.8s, fill 1.9s ease forwards 3.9s; 
 }
 
 .stroke-16 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 4.6s, fill 1.9s ease forwards 6.5s; 
+    animation: svg-animation 2s ease forwards 2.9s, fill 1.9s ease forwards 4s; 
 }
 
 .stroke-17 {
     stroke-dasharray: 215px;
     stroke-dashoffset: 215px;
-    animation: svg-animation 2s ease forwards 4.7s, fill 1.9s ease forwards 6.6s; 
+    animation: svg-animation 2s ease forwards 3s, fill 1.9s ease forwards 4.1s; 
 }
 
 .stroke-18 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 4.8s, fill 1.9s ease forwards 6.7s; 
+    animation: svg-animation 2s ease forwards 3.1s, fill 1.9s ease forwards 4.2s; 
 }
 
 .stroke-19 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 4.9s, fill 1.9s ease forwards 6.8s; 
+    animation: svg-animation 2s ease forwards 3.2s, fill 1.9s ease forwards 4.3s; 
 }
 
 .stroke-20 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 5s, fill 1.9s ease forwards 6.9s;
+    animation: svg-animation 2s ease forwards 3.3s, fill 1.9s ease forwards 4.4s;
 }
 
 .stroke-21 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 5.1s, fill 1.9s ease forwards 7s; 
+    animation: svg-animation 2s ease forwards 3.4s, fill 1.9s ease forwards 4.5s; 
 }
 
 .stroke-22 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 5.2s, fill 1.9s ease forwards 7.1s; 
+    animation: svg-animation 2s ease forwards 3.5s, fill 1.9s ease forwards 4.6s; 
 }
 
 .stroke-23 {
     stroke-dasharray: 180px;
     stroke-dashoffset: 180px;
-    animation: svg-animation 2s ease forwards 5.3s, fill 1.9s ease forwards 7.2s;
-}
-
-.skip-animations-info {
-    transform: translate(40.8rem, 0.5rem);
-    font-size: 10px;
-    opacity: 0;
+    animation: svg-animation 2s ease forwards 3.6s, fill 1.9s ease forwards 4.7s;
 }
 
 .phone-mode {
